@@ -1,0 +1,88 @@
+.list {
+  margin-top: 25px;
+  position: relative;
+  height: 1000px;
+  width: 100%;
+}
+
+.list-item {
+  margin-top: 100px;
+  width: 75%;
+  height: 1000px;
+  position: absolute;
+  left: 62%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.item {
+  width: 236px;
+  height: 450px;
+  box-shadow: 0px 0px 10px #aaa;
+  border-radius: 0px;
+  float: left;
+  margin: 5px 20px;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+}
+
+.item img {
+  width: 100%;
+  height: 300px;
+  border-radius: 0px;
+  background: black;
+  object-fit: inherit;
+  object-position: 50% 50%;
+}
+
+.item div {
+  width: 100%;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+
+.barang {
+  margin: 0;
+  width: 30%;
+  font-size: 15pt;
+  color: black;
+}
+
+.desc {
+  margin-top: 30px;
+  width: 80%;
+  font-size: 10pt;
+  color: black;
+  font-weight: lighter;
+}
+
+.harga {
+  margin-top: 30px;
+  margin-left: 120px;
+  width: 50%;
+  font-size: 10pt;
+  color: black;
+  font-weight: bolder;
+}
+
+/* Customize the label (the container) */
+.sidebar {
+  display: block;
+  height: 450px;
+  width: 203px;
+  left: 140px;
+  margin-block-start: -894px;
+  position: relative;
+  background-color: #ebebe0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.list-cat {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration-color: none;
+}

@@ -1,0 +1,55 @@
+.order
+{
+    width: 250px;
+    border: 1px solid silver;
+    padding: 5px;
+    margin: 5px;
+    position: absolute;
+    float:left;
+    bottom: 29%;
+}
+.size
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.detail
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+.much
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+.slod
+{
+    font-family: 'Courier New', Courier, monospace;
+    color: darkcyan;
+}
+.pesan
+{
+    padding: 18px 105px;
+    background-color:black;
+    border: 0;
+    cursor: pointer;
+    font-size: 10pt;
+    color: white;
+    outline: none;
+        width: 250px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+.wish
+{
+    height: 48px;
+    width: 250px;
+    background-color:white;
+    border: 1 black;
+    cursor: pointer;
+    font-size: 10pt;
+    color: black;
+    outline: none;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
