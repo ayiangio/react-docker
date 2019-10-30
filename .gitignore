@@ -12,7 +12,7 @@
 /build
 
 #config docker
-/webserver/*
+/webserver/data/*
 
 # misc
 .DS_Store
