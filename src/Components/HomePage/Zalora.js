@@ -20,7 +20,7 @@ class headZalora extends Component {
                         fontWeight: 'lighter',float:'left'
 					}}
 				>
-					Z A L O R A
+					Test CI/CD
 				</a>
 				<a
 					href="/women"
