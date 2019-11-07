@@ -20,7 +20,7 @@ class headZalora extends Component {
                         fontWeight: 'lighter',float:'left'
 					}}
 				>
-					Test Build Trigger From Githubwooks
+					Zalora
 				</a>
 				<a
 					href="/women"
