@@ -30,9 +30,8 @@ pipeline {
     }
     stage('Deploy '){
         steps{
-            def docker='sudo docker-compose -f cicdJenkins/docker-compose.yml up -d'
                 sshagent(['nginx']) {
-                    sh"ssh -o StrictHostKeyChecking=no ubuntu@172.31.30.247 ${docker}"
+                    sh"ssh -o StrictHostKeyChecking=no ubuntu@172.31.30.247 sudo docker-compose -f cicdJenkins/docker-compose.yml up -d"
             }
         }
     }
