@@ -20,7 +20,7 @@ class headZalora extends Component {
                         fontWeight: 'lighter',float:'left'
 					}}
 				>
-					Rion Miing
+					Rion Ming
 				</a>
 				<a
 					href="/women"
