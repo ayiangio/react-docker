@@ -1,39 +1,18 @@
 pipeline {
-  agent any
-  stages {
-    stage('Fetching Github'){
-        steps{
-            git 'https://github.com/ayiangio/cicdJenkins.git'
-        }
+    agent any
+    environment{
+        DOCKER_TAG = getDockerTag()
     }
-    stage('Install Dependency'){
-        steps{
-            nodejs('node') {
-                sh "npm install"
-            }
-        }        
-    }
-    stage('Build'){
-        steps{
-            nodejs('node') {
-                sh "npm run build"
-            }
-        }        
-    }
-    stage('Release App'){
-        steps{
-            sshagent(['nginx']) {
-                    sh"ssh ubuntu@172.31.30.247 sudo rm -rf cicdJenkins/build/*"
-                    sh "scp -r build ubuntu@172.31.30.247:cicdJenkins/"
-            }   
-        }        
-    }
-    stage('Deploy '){
-        steps{
-                sshagent(['nginx']) {
-                    sh"ssh -o StrictHostKeyChecking=no ubuntu@172.31.30.247 sudo docker-compose -f cicdJenkins/docker-compose.yml up -d"
+    stages{
+        stage('Build Docker Image'){
+            steps{
+                sh "docker build . -t ${IMAGE_URL_WITH_TAG}"
             }
         }
     }
-  }
+}
+
+def getDockerTag(){
+    def tag  = sh script: 'git rev-parse HEAD', returnStdout: true
+    return tag
 }
