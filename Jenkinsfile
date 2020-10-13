@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('Build Docker Image'){
             steps{
-                sh "docker build . -t ayiangio/react-zalora-kw:${DOCKER_TAG} ."
+                sh "sudo docker build . -t ayiangio/react-zalora-kw:${DOCKER_TAG} ."
             }
         }
     }
