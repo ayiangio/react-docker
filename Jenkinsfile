@@ -10,6 +10,14 @@ pipeline {
             }
         }
     }
+    stage('Push Docker Hub'){
+            steps{
+                withCredentials([string(credentialsId: 'pwd_hub', variable: 'pwd_hub')]) {
+                    sh "docker login -u ayiangio -p ${pwd_hub}"
+                    sh "docker push ayiangio/react-zalora-kw:${DOCKER_TAG}"
+                }
+            }
+        }
 }
 
 def getDockerTag(){
