@@ -20,7 +20,7 @@ class headZalora extends Component {
                         fontWeight: 'lighter',float:'left'
 					}}
 				>
-					Zalora KW (Testing Jenkins)
+					Zalora KW Using k8s
 				</a>
 				<a
 					href="/women"
