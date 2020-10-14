@@ -17,6 +17,14 @@ pipeline {
                 }
             }
         }
+        stage('Deploy To k8s'){
+            sh "chmod +x deploy.sh"
+            sh "./deploy.sh ${DOCKER_TAG}"
+            sshagent(['remote-machine']) {
+                sh "scp -o StrictHostKeyChecking=no deployment-new.yml admin@13.212.189.74:/home/admin/"
+                sh "kubectl apply -f deployment-new.yml"
+            }
+        }
     }
 }
 
