@@ -9,8 +9,7 @@ pipeline {
                 sh "sudo docker build . -t ayiangio/react-zalora-kw:${DOCKER_TAG} ."
             }
         }
-    }
-    stages('Push Docker Hub'){
+        stage('Push Docker Hub'){
             steps{
                 withCredentials([string(credentialsId: 'pwd_hub', variable: 'pwd_hub')]) {
                     sh "docker login -u ayiangio -p ${pwd_hub}"
@@ -18,6 +17,7 @@ pipeline {
                 }
             }
         }
+    }
 }
 
 def getDockerTag(){
