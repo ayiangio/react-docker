@@ -10,7 +10,7 @@ pipeline {
             }
         }
     }
-    stage('Push Docker Hub'){
+    stages('Push Docker Hub'){
             steps{
                 withCredentials([string(credentialsId: 'pwd_hub', variable: 'pwd_hub')]) {
                     sh "docker login -u ayiangio -p ${pwd_hub}"
